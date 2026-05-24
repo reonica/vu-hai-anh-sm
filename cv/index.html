@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hai Anh Vu - Portfolio Summary</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    @page {
+      size: A4;
+      margin: 18mm;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter', sans-serif;
+      background:#ffffff;
+      color:#111111;
+      line-height:1.5;
+      font-size:13px;
+    }
+
+    .page{
+      width:100%;
+      max-width:210mm;
+      margin:auto;
+    }
+
+    .header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      border-bottom:2px solid #111;
+      padding-bottom:18px;
+      margin-bottom:24px;
+    }
+
+    .name{
+      font-size:32px;
+      font-weight:700;
+      line-height:1;
+      margin-bottom:8px;
+    }
+
+    .role{
+      font-size:14px;
+      font-weight:600;
+      color:#2563eb;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+
+    .contact{
+      text-align:right;
+      font-size:12px;
+      line-height:1.8;
+      color:#444;
+    }
+
+    .contact a{
+      text-decoration:none;
+      color:#111;
+    }
+
+    .summary{
+      margin-bottom:24px;
+    }
+
+    .summary p{
+      color:#444;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:22px;
+      margin-bottom:24px;
+    }
+
+    .card{
+      border:1px solid #e5e5e5;
+      border-radius:12px;
+      padding:18px;
+    }
+
+    .card h3{
+      font-size:15px;
+      margin-bottom:12px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    .metric{
+      margin-bottom:14px;
+    }
+
+    .metric-number{
+      font-size:28px;
+      font-weight:700;
+      color:#111;
+    }
+
+    .metric-text{
+      font-size:12px;
+      color:#555;
+    }
+
+    .section{
+      margin-bottom:24px;
+    }
+
+    .section-title{
+      font-size:15px;
+      font-weight:700;
+      margin-bottom:12px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      border-bottom:1px solid #ddd;
+      padding-bottom:6px;
+    }
+
+    .timeline-item{
+      margin-bottom:16px;
+    }
+
+    .timeline-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:4px;
+    }
+
+    .job-title{
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .year{
+      font-size:12px;
+      color:#666;
+    }
+
+    .company{
+      font-size:12px;
+      font-weight:600;
+      color:#2563eb;
+      margin-bottom:6px;
+    }
+
+    .timeline-item p{
+      color:#555;
+      font-size:12px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .skill{
+      padding:6px 12px;
+      border:1px solid #ddd;
+      border-radius:999px;
+      font-size:11px;
+      background:#fafafa;
+    }
+
+    .expertise-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:14px;
+    }
+
+    .expertise-box{
+      border:1px solid #e5e5e5;
+      border-radius:10px;
+      padding:14px;
+    }
+
+    .expertise-box h4{
+      font-size:13px;
+      margin-bottom:8px;
+    }
+
+    .expertise-box ul{
+      padding-left:16px;
+    }
+
+    .expertise-box li{
+      margin-bottom:5px;
+      color:#555;
+      font-size:12px;
+    }
+
+    .footer{
+      margin-top:30px;
+      border-top:1px solid #ddd;
+      padding-top:12px;
+      text-align:center;
+      font-size:11px;
+      color:#666;
+    }
+
+    @media print{
+      body{
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page{
+        margin:0;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+      <div>
+        <div class="name">Hai Anh Vu</div>
+
+        <div class="role">
+          SEO • Growth Marketing • Digital Strategy
+        </div>
+      </div>
+
+      <div class="contact">
+        Hanoi, Vietnam<br>
+        <a href="mailto:anh.vh2795@gmail.com">
+          anh.vh2795@gmail.com
+        </a><br>
+
+        <a href="https://www.linkedin.com/in/haianh27/">
+          linkedin.com/in/haianh27
+        </a><br>
+
+        WhatsApp: +84 916 882 795
+      </div>
+
+    </div>
+
+    <!-- SUMMARY -->
+
+    <div class="summary">
+
+      <div class="section-title">
+        Professional Summary
+      </div>
+
+      <p>
+        Digital marketer specialized in SEO, content systems, and performance-focused growth strategies.
+        Experienced in building scalable organic growth systems, leading marketing operations, and optimizing
+        acquisition performance across tourism, service, beauty, and B2B industries.
+        Currently expanding toward growth marketing, brand strategy, and marketing automation.
+      </p>
+
+    </div>
+
+    <!-- HIGHLIGHTS -->
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>Key Results</h3>
+
+        <div class="metric">
+          <div class="metric-number">4×</div>
+
+          <div class="metric-text">
+            Organic impressions growth within 12 months.
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-number">2K+</div>
+
+          <div class="metric-text">
+            SEO-focused content pieces published.
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-number">€350K</div>
+
+          <div class="metric-text">
+            Annual revenue growth through SEO and digital marketing.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Core Strengths</h3>
+
+        <ul style="padding-left:18px; color:#555;">
+          <li>SEO & Organic Growth Strategy</li>
+          <li>Content Systems & Operations</li>
+          <li>Performance Marketing</li>
+          <li>Conversion Optimization</li>
+          <li>CRM & Acquisition Funnels</li>
+          <li>Cross-functional Leadership</li>
+          <li>Tourism & Service Marketing</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- EXPERIENCE -->
+
+    <div class="section">
+
+      <div class="section-title">
+        Career Experience
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-header">
+          <div class="job-title">Marketing Manager</div>
+          <div class="year">2023 — 2026</div>
+        </div>
+
+        <div class="company">
+          Autour Asia
+        </div>
+
+        <p>
+          Led SEO strategy, content operations, and digital growth initiatives for international tourism platforms.
+          Managed SEO training programs, coordinated marketing-production workflows, and developed scalable organic growth systems.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-header">
+          <div class="job-title">Sales & Marketing Manager</div>
+          <div class="year">2021 — 2023</div>
+        </div>
+
+        <div class="company">
+          Dong Do Elevator Co., LTD
+        </div>
+
+        <p>
+          Developed B2B sales and marketing strategies contributing to 400% year-over-year sales growth.
+          Managed acquisition campaigns, CRM operations, and performance optimization.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-header">
+          <div class="job-title">Digital Marketing Executive</div>
+          <div class="year">2020 — 2021</div>
+        </div>
+
+        <div class="company">
+          Anh Nguyen Beauty
+        </div>
+
+        <p>
+          Executed SEO, social media, PPC, and influencer marketing campaigns for a beauty and wellness brand,
+          focusing on audience acquisition and engagement optimization.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- EXPERTISE -->
+
+    <div class="section">
+
+      <div class="section-title">
+        Expertise
+      </div>
+
+      <div class="expertise-grid">
+
+        <div class="expertise-box">
+
+          <h4>SEO & Organic Growth</h4>
+
+          <ul>
+            <li>Large-scale SEO operations</li>
+            <li>Keyword & search intent strategy</li>
+            <li>Technical optimization</li>
+            <li>Backlink systems</li>
+          </ul>
+
+        </div>
+
+        <div class="expertise-box">
+
+          <h4>Marketing Operations</h4>
+
+          <ul>
+            <li>Workflow management</li>
+            <li>Team coordination</li>
+            <li>SEO training</li>
+            <li>Cross-functional collaboration</li>
+          </ul>
+
+        </div>
+
+        <div class="expertise-box">
+
+          <h4>Performance Marketing</h4>
+
+          <ul>
+            <li>Acquisition campaigns</li>
+            <li>Conversion optimization</li>
+            <li>Analytics & reporting</li>
+            <li>CRM systems</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SKILLS -->
+
+    <div class="section">
+
+      <div class="section-title">
+        Skills
+      </div>
+
+      <div class="skills">
+
+        <div class="skill">SEO Strategy</div>
+        <div class="skill">Organic Growth</div>
+        <div class="skill">Performance Marketing</div>
+        <div class="skill">Content Systems</div>
+        <div class="skill">Marketing Operations</div>
+        <div class="skill">Brand Positioning</div>
+        <div class="skill">Lead Generation</div>
+        <div class="skill">Google Analytics</div>
+        <div class="skill">CRM Systems</div>
+        <div class="skill">Conversion Optimization</div>
+        <div class="skill">Tourism Marketing</div>
+        <div class="skill">B2B Marketing</div>
+        <div class="skill">Team Leadership</div>
+        <div class="skill">Multilingual Communication</div>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      Portfolio Summary • Hai Anh Vu • Digital Marketing & SEO
+    </div>
+
+  </div>
+
+</body>
+</html>
