@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     * {
@@ -464,6 +466,57 @@
       flex-wrap: wrap;
     }
 
+    /* FLOATING WHATSAPP BUTTON */
+
+    .floating-whatsapp {
+      position: fixed;
+
+      right: 24px;
+      bottom: 24px;
+
+      width: 58px;
+      height: 58px;
+
+      border-radius: 50%;
+
+      background: white;
+      color: #111111;
+
+      border: 1px solid rgba(0,0,0,0.08);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 26px;
+
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
+      z-index: 999;
+
+      transition: 0.3s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-4px);
+      background: #111111;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+
+      .floating-whatsapp {
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
+
+        right: 16px;
+        bottom: 16px;
+      }
+
+    }
+
     /* MOBILE */
 
     .menu-btn {
@@ -821,11 +874,29 @@
 
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/haianh27/" target="_blank" class="btn btn-primary">LinkedIn</a>
+
+        <a href="https://wa.me/84916882795"
+          target="_blank"
+          class="btn btn-secondary">
+          WhatsApp
+        </a>
+        <a href="mailto:anh.vh2795@gmail.com"
+          class="btn btn-secondary">
+          Email
+        </a>
       </div>
 
     </div>
   </footer>
+    
+    <!-- FLOATING BUTTON WA -->
+    <a href="https://wa.me/84916882795"
+      class="floating-whatsapp"
+      target="_blank">
 
+      <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
