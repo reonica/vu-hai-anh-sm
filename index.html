@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hai Anh | Digital Marketing Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0f1115;
+      --card: #171a21;
+      --soft: #222733;
+      --text: #f5f7fa;
+      --muted: #a7b0c0;
+      --line: rgba(255,255,255,0.08);
+      --accent: #7dd3fc;
+      --max-width: 1180px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 92%;
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-title {
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .section-heading {
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.1;
+      margin-bottom: 24px;
+      max-width: 700px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      max-width: 760px;
+      font-size: 17px;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(15,17,21,0.7);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-wrapper {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      transition: 0.3s ease;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .linkedin-btn {
+      padding: 12px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      transition: 0.3s ease;
+    }
+
+    .linkedin-btn:hover {
+      background: white;
+      color: black;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-subtitle {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-size: clamp(52px, 8vw, 96px);
+      line-height: 0.95;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .hero-description {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 620px;
+      margin-bottom: 40px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 22px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-primary {
+      background: white;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: var(--soft);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 40px;
+    }
+
+    .hero-card-label {
+      color: var(--muted);
+      margin-bottom: 14px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .metric {
+      margin-bottom: 28px;
+    }
+
+    .metric-number {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .metric-text {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .about-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 36px;
+    }
+
+    .about-card h3 {
+      margin-bottom: 18px;
+      font-size: 24px;
+    }
+
+    .about-card p {
+      color: var(--muted);
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+      position: relative;
+      margin-top: 60px;
+      padding-left: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: var(--line);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 60px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -38px;
+      top: 8px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(125, 211, 252, 0.12);
+    }
+
+    .timeline-year {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .timeline-title {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .timeline-company {
+      color: white;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .timeline-description {
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .experience-card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      transition: 0.3s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,0.16);
+    }
+
+    .experience-card h3 {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .experience-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .experience-card ul {
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .experience-card li {
+      margin-bottom: 10px;
+    }
+
+    /* SKILLS */
+
+    .skills-wrapper {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .skill-tag {
+      padding: 14px 20px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: white;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      background: var(--soft);
+    }
+
+    /* EXTRA SECTION */
+
+    .extra-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .extra-card {
+      padding: 34px;
+      border-radius: 24px;
+      background: var(--card);
+      border: 1px solid var(--line);
+    }
+
+    .extra-card h3 {
+      margin-bottom: 18px;
+      font-size: 24px;
+    }
+
+    .extra-card p,
+    .extra-card li {
+      color: var(--muted);
+    }
+
+    .extra-card ul {
+      padding-left: 18px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    /* MOBILE */
+
+    .menu-btn {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .experience-grid,
+      .extra-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-card {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 72px;
+        right: -100%;
+        width: 260px;
+        height: calc(100vh - 72px);
+        background: #11141b;
+        flex-direction: column;
+        padding: 40px 24px;
+        transition: 0.3s ease;
+        align-items: flex-start;
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .timeline {
+        padding-left: 30px;
+      }
+
+      .timeline-item::before {
+        left: -28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">HAI ANH</a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#timeline">Journey</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="linkedin-btn">Contact</a>
+      </div>
+
+      <div class="menu-btn" id="menuBtn">☰</div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="hero-subtitle">Digital Marketing • Tourism • Strategy</div>
+
+        <h1 class="hero-title">
+          Data-Driven <br>
+          Marketing For <br>
+          Modern Tourism.
+        </h1>
+
+        <p class="hero-description">
+          I help tourism brands grow through SEO, content strategy, digital campaigns, and performance-focused marketing systems.
+          My work combines storytelling, analytics, and user behavior to create sustainable growth.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://www.linkedin.com/in/haianh27/" target="_blank" class="btn btn-primary">LinkedIn</a>
+          <a href="#experience" class="btn btn-secondary">View Portfolio</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-label">Selected Results</div>
+
+        <div class="metric">
+          <div class="metric-number">20%</div>
+          <div class="metric-text">Monthly SEO lead contribution compared to total paid + organic acquisition.</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-number">2K+</div>
+          <div class="metric-text">Published SEO-focused content pieces across tourism and digital platforms.</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-number">Top 10</div>
+          <div class="metric-text">Keyword ranking growth through long-term content and optimization strategy.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+    <div class="container">
+      <div class="section-title">About Me</div>
+
+      <h2 class="section-heading">
+        Marketing manager focused on tourism, SEO, and digital growth.
+      </h2>
+
+      <p class="section-text">
+        I specialize in building digital ecosystems for tourism businesses through SEO strategy, content marketing, performance campaigns, and user-centered communication.
+        My approach combines analytical thinking with modern minimalist branding.
+      </p>
+
+      <div class="about-grid" style="margin-top:60px;">
+
+        <div class="about-card">
+          <h3>What I Do</h3>
+          <p>
+            SEO strategy, digital marketing management, performance optimization, content planning, conversion-focused campaigns, and brand positioning for tourism businesses.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <h3>My Philosophy</h3>
+          <p>
+            Clean systems. Meaningful storytelling. Sustainable traffic. I believe good marketing should feel natural, measurable, and human.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+
+  <section id="timeline">
+    <div class="container">
+
+      <div class="section-title">Career Journey</div>
+
+      <h2 class="section-heading">
+        A timeline of growth, strategy, and digital transformation.
+      </h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-year">2026 — Present</div>
+          <h3 class="timeline-title">Marketing Manager</h3>
+          <div class="timeline-company">Tourism & Digital Ecosystem</div>
+          <p class="timeline-description">
+            Managing SEO strategy, digital campaigns, content operations, and performance growth while coordinating marketing direction across tourism-focused platforms.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2024 — 2026</div>
+          <h3 class="timeline-title">SEO & Content Strategy</h3>
+          <div class="timeline-company">Travel & Cultural Projects</div>
+          <p class="timeline-description">
+            Built content systems, optimized website structures, and improved search visibility through long-term organic growth strategies.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2022 — 2024</div>
+          <h3 class="timeline-title">Digital Marketing Specialist</h3>
+          <div class="timeline-company">Tourism Industry</div>
+          <p class="timeline-description">
+            Worked on content creation, audience acquisition, social media campaigns, and digital branding for travel-related businesses.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+
+  <section id="experience">
+    <div class="container">
+
+      <div class="section-title">Experience</div>
+
+      <h2 class="section-heading">
+        Strategy, execution, and measurable growth.
+      </h2>
+
+      <div class="experience-grid">
+
+        <div class="experience-card">
+          <h3>SEO Leadership</h3>
+          <p>
+            Built scalable SEO systems for tourism-focused websites and content operations.
+          </p>
+
+          <ul>
+            <li>Managed large-scale content structures.</li>
+            <li>Improved keyword visibility and search intent alignment.</li>
+            <li>Created long-term organic traffic strategies.</li>
+          </ul>
+        </div>
+
+        <div class="experience-card">
+          <h3>Content Strategy</h3>
+          <p>
+            Developed multilingual and culturally adapted content for tourism audiences.
+          </p>
+
+          <ul>
+            <li>Editorial planning and SEO copywriting.</li>
+            <li>Audience-focused storytelling.</li>
+            <li>Brand tone consistency across channels.</li>
+          </ul>
+        </div>
+
+        <div class="experience-card">
+          <h3>Performance Marketing</h3>
+          <p>
+            Combined analytics and marketing data to improve conversion and acquisition.
+          </p>
+
+          <ul>
+            <li>Campaign optimization.</li>
+            <li>Lead acquisition analysis.</li>
+            <li>Marketing performance reporting.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+    <div class="container">
+
+      <div class="section-title">Skills</div>
+
+      <h2 class="section-heading">
+        Tools, systems, and marketing capabilities.
+      </h2>
+
+      <div class="skills-wrapper">
+        <div class="skill-tag">SEO Strategy</div>
+        <div class="skill-tag">Content Marketing</div>
+        <div class="skill-tag">Digital Marketing</div>
+        <div class="skill-tag">Marketing Management</div>
+        <div class="skill-tag">Google Analytics</div>
+        <div class="skill-tag">Keyword Research</div>
+        <div class="skill-tag">Performance Marketing</div>
+        <div class="skill-tag">Brand Positioning</div>
+        <div class="skill-tag">Tourism Marketing</div>
+        <div class="skill-tag">Social Media</div>
+        <div class="skill-tag">Copywriting</div>
+        <div class="skill-tag">Content Planning</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXTRA SECTION -->
+
+  <section>
+    <div class="container">
+
+      <div class="section-title">Recommended Additions</div>
+
+      <h2 class="section-heading">
+        What makes a marketing portfolio stronger.
+      </h2>
+
+      <div class="extra-grid">
+
+        <div class="extra-card">
+          <h3>Case Studies</h3>
+
+          <ul>
+            <li>SEO growth results with before / after metrics.</li>
+            <li>Traffic improvement and lead generation.</li>
+            <li>Tourism campaign strategy breakdowns.</li>
+            <li>Content systems you built or managed.</li>
+          </ul>
+        </div>
+
+        <div class="extra-card">
+          <h3>Why This Matters</h3>
+
+          <p>
+            Marketing portfolios become significantly more convincing when they include measurable outcomes. Recruiters and clients want to see growth metrics, traffic improvements, rankings, conversions, or campaign impact.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+
+  <footer id="contact">
+    <div class="container">
+
+      <h2 class="section-heading" style="margin:auto; text-align:center; max-width:700px; margin-bottom:20px;">
+        Let’s build meaningful digital experiences.
+      </h2>
+
+      <p>
+        Open to collaborations, tourism projects, and digital marketing opportunities.
+      </p>
+
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/haianh27/" target="_blank" class="btn btn-primary">LinkedIn</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+
+      if(window.scrollY > 30){
+        nav.style.background = 'rgba(10,10,10,0.92)';
+      } else {
+        nav.style.background = 'rgba(15,17,21,0.7)';
+      }
+    });
+  </script>
+
+</body>
+</html>
