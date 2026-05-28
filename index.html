@@ -25,6 +25,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       --muted: #666666;
       --line: rgba(0,0,0,0.08);
       --accent: #2563eb;
+      --max-width: 1280px;
     }
 
     html {
@@ -351,6 +352,118 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     .timeline-description {
       color: var(--muted);
       max-width: 760px;
+    }
+
+    /* IMPACT PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin-top: 60px;
+    }
+
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 36px;
+      transition: 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .project-title {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .project-period {
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .project-role {
+      margin-bottom: 22px;
+      color: var(--muted);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .project-badge {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--soft);
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .project-section {
+      margin-bottom: 22px;
+    }
+
+    .project-section h4 {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .project-section p,
+    .project-section li {
+      color: var(--muted);
+    }
+
+    .project-section ul {
+      padding-left: 18px;
+    }
+
+    .project-results {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .result-box {
+      padding: 22px;
+      border-radius: 20px;
+      background: var(--soft);
+    }
+
+    .result-number {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .result-label {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+
+      .project-results {
+        grid-template-columns: 1fr;
+      }
+
     }
 
     /* EXPERIENCE */
@@ -794,6 +907,164 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </div>
   </section>
 
+  <!-- IMPACT & PROJECTS -->
+
+  <section id="projects">
+    <div class="container">
+
+      <div class="section-title">Projects & Impact</div>
+
+      <h2 class="section-heading">
+        Selected projects, growth initiatives, and measurable business impact.
+      </h2>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+
+        <div class="project-card">
+
+          <div class="project-top">
+            <div class="project-title">
+              International SEO Growth System
+            </div>
+
+            <div class="project-period">
+              2023 — 2026
+            </div>
+          </div>
+
+          <div class="project-role">
+            Marketing Manager • Autour Asia
+          </div>
+
+          <div class="project-meta">
+            <div class="project-badge">Team: 20+ collaborators</div>
+            <div class="project-badge">Global Tourism Market</div>
+            <div class="project-badge">SEO & Content Operations</div>
+          </div>
+
+          <div class="project-section">
+            <h4>Project Scope</h4>
+
+            <p>
+              Built and managed scalable SEO and content systems for tourism websites targeting international audiences.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h4>Responsibilities</h4>
+
+            <ul>
+              <li>Led SEO roadmap and content strategy.</li>
+              <li>Managed SEO training and workflow operations.</li>
+              <li>Coordinated content, backlink, and technical SEO execution.</li>
+              <li>Worked with developers and editors to improve site structure and UX.</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h4>Results</h4>
+
+            <ul>
+              <li>Increased organic impressions by 4× within 12 months.</li>
+              <li>Improved average keyword position from 15.3 to 8.8.</li>
+              <li>Published and optimized 2,000+ SEO-focused content pages.</li>
+              <li>Helped increase annual revenue from €200K to €350K.</li>
+            </ul>
+          </div>
+
+          <div class="project-results">
+
+            <div class="result-box">
+              <div class="result-number">4×</div>
+              <div class="result-label">Organic Growth</div>
+            </div>
+
+            <div class="result-box">
+              <div class="result-number">20+</div>
+              <div class="result-label">SEO Collaborators</div>
+            </div>
+
+            <div class="result-box">
+              <div class="result-number">€350K</div>
+              <div class="result-label">Annual Revenue</div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- PROJECT 2 -->
+
+        <div class="project-card">
+
+          <div class="project-top">
+            <div class="project-title">
+              B2B Sales & Marketing Expansion
+            </div>
+
+            <div class="project-period">
+              2021 — 2023
+            </div>
+          </div>
+
+          <div class="project-role">
+            Sales & Marketing Manager • Dong Do Elevator
+          </div>
+
+          <div class="project-meta">
+            <div class="project-badge">B2B Marketing</div>
+            <div class="project-badge">CRM Operations</div>
+            <div class="project-badge">Lead Generation</div>
+          </div>
+
+          <div class="project-section">
+            <h4>Responsibilities</h4>
+
+            <ul>
+              <li>Developed acquisition and business development strategies.</li>
+              <li>Managed digital marketing campaigns and sales coordination.</li>
+              <li>Optimized CRM workflows and customer tracking systems.</li>
+              <li>Supported conversion tracking and lead qualification.</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h4>Results</h4>
+
+            <ul>
+              <li>Contributed to 400% YoY sales growth.</li>
+              <li>Improved lead acquisition efficiency through multi-channel campaigns.</li>
+              <li>Supported scalable customer acquisition workflows.</li>
+            </ul>
+          </div>
+
+          <div class="project-results">
+
+            <div class="result-box">
+              <div class="result-number">400%</div>
+              <div class="result-label">Sales Growth</div>
+            </div>
+
+            <div class="result-box">
+              <div class="result-number">B2B</div>
+              <div class="result-label">Market Focus</div>
+            </div>
+
+            <div class="result-box">
+              <div class="result-number">CRM</div>
+              <div class="result-label">Workflow Optimization</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- EXPERIENCE -->
 
   <section id="experience">
@@ -922,8 +1193,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       </div>
 
     </div>
+    </div>
   </section>
-  </div>
 
   <!-- CONTACT -->
 
